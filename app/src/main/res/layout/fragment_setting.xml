@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragment.SettingFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/ll1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:paddingTop="50dp"
+                        android:weightSum="2">
+
+                        <RelativeLayout
+                            android:id="@+id/flashlight"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/flashlight">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@+id/flashSwitch"
+                                android:fontFamily="@font/poppins_bold"
+                                android:paddingHorizontal="10dp"
+                                android:text="Flash Light"
+                                android:textColor="#2A3135"
+                                android:textSize="16dp" />
+
+                            <com.google.android.material.switchmaterial.SwitchMaterial
+                                android:id="@+id/flashSwitch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:outlineAmbientShadowColor="@color/app_color"
+                                android:textOff="OFF"
+                                android:textOn="ON"
+                                app:thumbTint="@color/app_color" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/phone_vibrate"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/phone_vibrate">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@+id/vibrationSwitch"
+                                android:fontFamily="@font/poppins_bold"
+                                android:paddingHorizontal="10dp"
+                                android:text="Phone Vibrate"
+                                android:textColor="#2A3135"
+                                android:textSize="16dp" />
+
+                            <com.google.android.material.switchmaterial.SwitchMaterial
+                                android:id="@+id/vibrationSwitch"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginLeft="8dp"
+                                android:layout_marginBottom="8dp"
+                                android:outlineAmbientShadowColor="@color/app_color"
+                                android:textOff="OFF"
+                                android:textOn="ON"
+                                app:thumbTint="@color/app_color" />
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_below="@+id/ll1"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/sounds">
+
+                        <TextView
+                            android:id="@+id/sounds"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="65dp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:paddingHorizontal="30dp"
+                            android:text="Sounds"
+                            android:textColor="#2A3135"
+                            android:textSize="16dp" />
+
+                        <LinearLayout
+                            android:id="@+id/volume_ll"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/sounds"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="15dp"
+                                android:text="Volume"
+                                android:textColor="#CC2A3135"
+                                android:textSize="13dp" />
+
+                            <SeekBar
+                                android:id="@+id/volume_seekbar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:progressTint="@color/app_color"
+                                android:thumbTint="@color/app_color" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/duration"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/volume_ll"
+                            android:visibility="gone"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="15dp"
+                                android:text="Duration"
+                                android:textColor="#CC2A3135"
+                                android:textSize="13dp" />
+
+                            <RadioGroup
+                                android:id="@+id/duration_radio_group"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="4">
+
+                                <RadioButton
+                                    android:id="@+id/fifteen_sec"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="2dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/back_selector"
+                                    android:button="@null"
+                                    android:gravity="center"
+                                    android:paddingVertical="10dp"
+                                    android:text="15s"
+                                    android:textColor="@color/navigation_drawer_text_color_selector" />
+
+                                <RadioButton
+                                    android:id="@+id/thirty_sec"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="2dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/back_selector"
+                                    android:button="@null"
+                                    android:gravity="center"
+                                    android:paddingVertical="10dp"
+                                    android:text="30s"
+                                    android:textColor="@color/navigation_drawer_text_color_selector" />
+
+                                <RadioButton
+                                    android:id="@+id/one_min"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="2dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/back_selector"
+                                    android:button="@null"
+                                    android:gravity="center"
+                                    android:paddingVertical="10dp"
+                                    android:text="1m"
+                                    android:textColor="@color/navigation_drawer_text_color_selector" />
+
+                                <RadioButton
+                                    android:id="@+id/two_min"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="2dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/back_selector"
+                                    android:button="@null"
+                                    android:gravity="center"
+                                    android:paddingVertical="10dp"
+                                    android:text="2m"
+                                    android:textColor="@color/navigation_drawer_text_color_selector" />
+
+
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/current_sound"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/duration"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:fontFamily="@font/poppins"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="5dp"
+                                android:text="Current Sound : "
+                                android:textColor="#CC2A3135"
+                                android:textSize="13dp" />
+
+                            <TextView
+                                android:id="@+id/song_item"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:fontFamily="@font/poppins"
+                                android:paddingHorizontal="5dp"
+                                android:text="None"
+                                android:textColor="@color/app_color"
+                                android:textSize="13dp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/changeRingtone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/current_sound"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginHorizontal="80dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/back_checked"
+                            android:backgroundTint="#2A3135"
+                            android:fontFamily="@font/poppins_bold"
+                            android:gravity="center"
+                            android:paddingVertical="10dp"
+                            android:text="Change Sound >>"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/ringSwitch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="40dp"
+                            android:outlineAmbientShadowColor="@color/app_color"
+                            android:textOff="OFF"
+                            android:textOn="ON"
+                            app:thumbTint="@color/app_color" />
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </androidx.core.widget.NestedScrollView>
+            <LinearLayout
+                android:id="@+id/native_ad0"
+                android:layout_width="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="4dp"
+                android:layout_height="wrap_content">
+                <include layout="@layout/small_native_container" />
+            </LinearLayout>
+        </RelativeLayout>
+
+
+
+
+    </FrameLayout>
+</layout>

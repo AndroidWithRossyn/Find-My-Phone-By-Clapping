@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/onboarding_background"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/dots"
+        android:layout_marginBottom="10dp"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_above="@+id/tv_title"
+            android:layout_marginTop="20dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/second_onboard" />
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="-60dp"
+            android:elevation="10dp"
+            android:ellipsize="end"
+            android:layout_above="@+id/tv_dec"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center_horizontal"
+            android:maxLines="2"
+            android:text="Sound Customization"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tv_dec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentBottom="true"
+            android:ellipsize="end"
+            android:elevation="10dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="center_horizontal"
+            android:maxLines="3"
+            android:text="@string/second_onboard"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/dots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/txt_next"
+        android:layout_marginBottom="20dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/dot_2" />
+    <TextView
+        android:id="@+id/txt_next"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/native_ad0"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:text="Next"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/next_button"
+        android:gravity="center" />
+    <LinearLayout
+        android:id="@+id/native_ad0"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+        <include layout="@layout/small_native_container" />
+    </LinearLayout>
+
+
+</RelativeLayout>

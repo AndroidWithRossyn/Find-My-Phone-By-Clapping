@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Find My Phone By Clapping</string>
+    <string name="first_onboard">Never lose your phone! Just clap twice and locate your device within seconds.</string>
+    <string name="second_onboard">Customize the Tones, choose different Sounds, or even enable Vibration alerts.</string>
+
+    <string name="find_phone_by_whistle">Find Phone By Clap</string>
+    <string name="chk_permission_dialog">Please enable permission from settings.Find My Phone By Clapping app needs permission to work properly click on settings and go to permission and allow permission.Find My Phone By Clapping is not collecting anytype of personal information.</string>
+    <string name="go_to_setting">Settings</string>
+    <string name="you_can_find_out_more_information_by_clicking_on_the_following_link">You can find out more information by clicking on the following link :</string>
+    <string name="we_do_not_share_any_kind_of_your_personal_data_with_third_parties">We do not share any kind of your Personal Data with third parties.</string>
+    <string name="privacy_policy_may_be_updated_from_time_to_time_for_any_reason_we_will_notify_you_of_any_changes_to_our_privacy_policy_by_posting_the_new_privacy_policy_here">Privacy Policy may be updated from time to time for any reason. We will notify you of any changes to our Privacy Policy by posting the new Privacy Policy here.</string>
+    <string name="any_type_of_modification_to_the_app_or_its_components_is_not_allowed">Any type of modification to the app or its components is not allowed.</string>
+    <string name="if_we_find_the_app_is_being_used_outside_its_terms_of_use_we_may_restrict_access_to_it">If we find the app is being used outside its terms of use, we may restrict access to it.</string>
+    <string name="by_pressing_the_accept_button_i_declare_i_have_read_and_accepted_the_following_condition_of_use">By pressing the Accept button, I declare I have read and accepted the following condition of use.</string>
+    <string name="android_apps_is_warning_you_about_the_app_that_gives_you_many_services_and_important_information_for_safer_and_efficient_use">The application is notifying you to the presence of an app that provides several services that are essential information for safer and more efficient use.</string>
+    <string name="terms_conditions"><u>Terms &amp; Conditions</u></string>
+    <string name="select_tone">Please Select Ringtone</string>
+    <string name="service">Service is running</string>
+    <string name="goback">No</string>
+    <string name="permissionenabled">This Application will never use take any personal information but we need following permissions to run application perfectly. Thanks</string>
+    <string name="privacy_policy_tv"><u>Privacy Policy</u></string>
+    <string name="android_apps">Android Apps</string>
+    <string name="permission_message">Please we required permission to run application</string>
+    <string name="terms_of_use_cap">Terms Of Use</string>
+    <string name="whistle_detection">Service is running to detect Clap</string>
+
+
+    <string name="exit">Exit</string>
+
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="no">NO</string>
+    <string name="yes">YES</string>
+    <string name="exit_dialog">EXIT </string>
+    <string name="EXITorNO">Are you sure you want to exit?</string>
+</resources>

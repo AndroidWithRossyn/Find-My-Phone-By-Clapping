@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.FindFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/menu_btn"
+                        android:fontFamily="@font/poppins_bold"
+                        android:gravity="center"
+                        android:layout_marginTop="20dp"
+                        android:text="Tap to Active"
+                        android:textColor="@color/app_color"
+                        android:textSize="20dp" />
+                    <ImageView
+                        android:id="@+id/enable_disable"
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_gravity="center_horizontal"/>
+                    <TextView
+                        android:id="@+id/use"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/menu_btn"
+                        android:gravity="center"
+                        android:background="@drawable/use"
+                        android:paddingVertical="5dp"
+                        android:layout_marginBottom="20dp"
+                        android:paddingHorizontal="30dp"
+                        android:drawablePadding="20dp"
+                        android:layout_gravity="center_horizontal"
+                        android:drawableLeft="@drawable/info"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/poppins"
+                        android:text="How to Use  \u203A \u203A"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/native_ad_large"
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="5dp"
+        android:layout_marginHorizontal="4dp"
+        android:layout_height="wrap_content">
+        <include layout="@layout/full_native_container" />
+    </LinearLayout>
+
+
+</FrameLayout>
