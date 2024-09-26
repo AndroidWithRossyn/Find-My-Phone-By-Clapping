@@ -6,11 +6,6 @@ The Find My Phone By Clapping App is a handy and innovative application designed
 <br>
 <br>
 
-<div align="center">
-  
-<a href="mailto:banrossyn@gmail.com"><img src="https://img.shields.io/badge/Email-banrossyn%40gmail.com-blue"></a>
-
-</div>
  
 # Download Now:
 <p align="center">
