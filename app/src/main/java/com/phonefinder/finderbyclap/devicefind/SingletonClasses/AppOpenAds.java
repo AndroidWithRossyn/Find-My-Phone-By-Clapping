@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Application;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleObserver;
 import androidx.lifecycle.OnLifecycleEvent;
@@ -30,14 +31,14 @@ public class AppOpenAds implements LifecycleObserver, Application.ActivityLifecy
     }
 
     @Override
-    public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
+    public void onActivityCreated(@NonNull Activity activity, Bundle savedInstanceState) {
         AppOpenAds.activity = activity;
         bundle = savedInstanceState;
 
     }
 
     @Override
-    public void onActivityStarted(Activity activity) {
+    public void onActivityStarted(@NonNull Activity activity) {
         AppOpenAds.activity = activity;
     }
 
@@ -59,7 +60,7 @@ public class AppOpenAds implements LifecycleObserver, Application.ActivityLifecy
     }
 
     @Override
-    public void onActivityResumed(Activity activity) {
+    public void onActivityResumed(@NonNull Activity activity) {
         AppOpenAds.activity = activity;
     }
 

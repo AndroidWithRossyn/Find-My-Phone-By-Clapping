@@ -19,14 +19,14 @@ public class Intro1Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         ActivityIntro1Binding binding = ActivityIntro1Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        AdUtils.showNativeAd(activity, Constants.adsResponseModel.getNative_ads().getAdx(), binding.nativeAd0.findViewById(com.adsmodule.api.R.id.native_ad), 2, null);
+//        AdUtils.showNativeAd(activity, Constants.adsResponseModel.getNative_ads().getAdx(), binding.nativeAd0.findViewById(com.adsmodule.api.R.id.native_ad), 2, null);
 
         binding.txtNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
+//                AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
                     startActivity(new Intent(activity, TermsOfUseActivity.class));
-                });
+//                });
 
             }
         });

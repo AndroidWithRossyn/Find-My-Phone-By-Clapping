@@ -39,7 +39,7 @@ public class SettingFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_setting, container, false);
-        AdUtils.showNativeAd(requireActivity(), Constants.adsResponseModel.getNative_ads().getAdx(), binding.nativeAd0.findViewById(com.adsmodule.api.R.id.native_ad), 2, null);
+//        AdUtils.showNativeAd(requireActivity(), Constants.adsResponseModel.getNative_ads().getAdx(), binding.nativeAd0.findViewById(com.adsmodule.api.R.id.native_ad), 2, null);
         String ringtoneUriStr = getPreference("ringtone_Name");
         if (!ringtoneUriStr.isEmpty()) {
             Uri lastSelectedRingtoneUri = Uri.parse(ringtoneUriStr);
@@ -76,13 +76,13 @@ public class SettingFragment extends Fragment {
             binding.ringSwitch.setChecked(false);
         }
         binding.changeRingtone.setOnClickListener(v -> {
-            AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
+//            AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
                 Intent intent = new Intent("android.intent.action.RINGTONE_PICKER");
                 intent.putExtra("android.intent.extra.ringtone.TYPE", 2);
                 intent.putExtra("android.intent.extra.ringtone.TITLE", getResources().getString(R.string.select_tone));
                 intent.putExtra("android.intent.extra.ringtone.EXISTING_URI", (Parcelable) null);
                 startActivityForResult(intent, 5);
-            });
+//            });
 
         });
 

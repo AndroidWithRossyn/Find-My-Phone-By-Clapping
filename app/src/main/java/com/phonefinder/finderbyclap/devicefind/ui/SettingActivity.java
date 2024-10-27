@@ -33,7 +33,7 @@ public class SettingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivitySettingBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        AdUtils.showNativeAd(activity, Constants.adsResponseModel.getNative_ads().getAdx(), binding.nativeAdLarge.findViewById(com.adsmodule.api.R.id.native_ad1), 1, null);
+//        AdUtils.showNativeAd(activity, Constants.adsResponseModel.getNative_ads().getAdx(), binding.nativeAdLarge.findViewById(com.adsmodule.api.R.id.native_ad1), 1, null);
         String ringtoneUriStr = getPreference("ringtone_Name");
         if (!ringtoneUriStr.isEmpty()) {
             Uri lastSelectedRingtoneUri = Uri.parse(ringtoneUriStr);
@@ -47,12 +47,12 @@ public class SettingActivity extends AppCompatActivity {
         binding.backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AdUtils.showBackPressAds(activity, Constants.adsResponseModel.getApp_open_ads().getAdx(), new AppInterfaces.AppOpenADInterface() {
-                    @Override
-                    public void appOpenAdState(boolean state_load) {
                         SettingActivity.super.onBackPressed();
-                    }
-                });
+//                AdUtils.showBackPressAds(activity, Constants.adsResponseModel.getApp_open_ads().getAdx(), new AppInterfaces.AppOpenADInterface() {
+//                    @Override
+//                    public void appOpenAdState(boolean state_load) {
+//                    }
+//                });
             }
         });
         if(getPreference("flash").equals("YES"))
@@ -81,13 +81,13 @@ public class SettingActivity extends AppCompatActivity {
             binding.ringSwitch.setChecked(false);
         }
         binding.changeRingtone.setOnClickListener(v -> {
-            AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
+//            AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
                 Intent intent = new Intent("android.intent.action.RINGTONE_PICKER");
                 intent.putExtra("android.intent.extra.ringtone.TYPE", 2);
                 intent.putExtra("android.intent.extra.ringtone.TITLE", getResources().getString(R.string.select_tone));
                 intent.putExtra("android.intent.extra.ringtone.EXISTING_URI", (Parcelable) null);
                 startActivityForResult(intent, 5);
-            });
+//            });
 
         });
 

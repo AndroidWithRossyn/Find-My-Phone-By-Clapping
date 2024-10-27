@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         binding.phoneFinderll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
+//                AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
                     binding.phoneFinderll.setBackground(pressedBackground);
                     binding.settingLl.setBackground(defaultBackground);
                     binding.referLl.setBackground(defaultBackground);
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
                     binding.settings.setImageDrawable(getResources().getDrawable(R.drawable.setting));
                     binding.settingTxt.setTextColor(getResources().getColor(R.color.gray_light));*/
                     binding.drawer.closeDrawer(Gravity.LEFT);
-                });
+//                });
 
 
             }
@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
         binding.settingLl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
+//                AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
                     binding.settingLl.setBackground(pressedBackground);
                     binding.phoneFinderll.setBackground(defaultBackground);
                     binding.referLl.setBackground(defaultBackground);
@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
                     binding.findTxt.setTextColor(getResources().getColor(R.color.gray_light));*/
                     binding.drawer.closeDrawer(Gravity.LEFT);
                     startActivity(new Intent(MainActivity.this,SettingActivity.class));
-                });
+//                });
 
 
             }
@@ -158,28 +158,28 @@ public class MainActivity extends AppCompatActivity {
         binding.find.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
+//                AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
                     binding.find.setImageDrawable(getResources().getDrawable(R.drawable.find_icon));
                     binding.settings.setImageDrawable(getResources().getDrawable(R.drawable.setting));
                     FragmentManager fragmentManager = getSupportFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                     fragmentTransaction.replace(R.id.fragment_container, new FindFragment());
                     fragmentTransaction.commit();
-                });
+//                });
 
             }
         });
         binding.settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
+//                AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
                     binding.find.setImageDrawable(getResources().getDrawable(R.drawable.find_unchecked));
                     binding.settings.setImageDrawable(getResources().getDrawable(R.drawable.settings_checked));
                     FragmentManager fragmentManager = getSupportFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                     fragmentTransaction.replace(R.id.fragment_container, new SettingFragment());
                     fragmentTransaction.commit();
-                });
+//                });
 
             }
         });

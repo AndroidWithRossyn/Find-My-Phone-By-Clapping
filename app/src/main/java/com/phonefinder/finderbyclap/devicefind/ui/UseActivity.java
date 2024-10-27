@@ -19,8 +19,8 @@ public class UseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityUseBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        AdUtils.showNativeAd(activity, Constants.adsResponseModel.getNative_ads().getAdx(), binding.nativeAdSmall.findViewById(com.adsmodule.api.R.id.native_ad), 2, null);
-        AdUtils.showNativeAd(activity, Constants.adsResponseModel.getNative_ads().getAdx(), binding.nativeAdBig.findViewById(com.adsmodule.api.R.id.native_ad1), 1, null);
+//        AdUtils.showNativeAd(activity, Constants.adsResponseModel.getNative_ads().getAdx(), binding.nativeAdSmall.findViewById(com.adsmodule.api.R.id.native_ad), 2, null);
+//        AdUtils.showNativeAd(activity, Constants.adsResponseModel.getNative_ads().getAdx(), binding.nativeAdBig.findViewById(com.adsmodule.api.R.id.native_ad1), 1, null);
 
         binding.view1.setBackground(new DashedLineDrawable(this));
         binding.view2.setBackground(new DashedLineDrawable(this));
@@ -28,23 +28,23 @@ public class UseActivity extends AppCompatActivity {
         binding.backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AdUtils.showBackPressAds(activity, Constants.adsResponseModel.getApp_open_ads().getAdx(), new AppInterfaces.AppOpenADInterface() {
-                    @Override
-                    public void appOpenAdState(boolean state_load) {
                         UseActivity.super.onBackPressed();
-                    }
-                });
+//                AdUtils.showBackPressAds(activity, Constants.adsResponseModel.getApp_open_ads().getAdx(), new AppInterfaces.AppOpenADInterface() {
+//                    @Override
+//                    public void appOpenAdState(boolean state_load) {
+//                    }
+//                });
             }
         });
     }
 
     @Override
     public void onBackPressed() {
-        AdUtils.showBackPressAds(activity, Constants.adsResponseModel.getApp_open_ads().getAdx(), new AppInterfaces.AppOpenADInterface() {
-            @Override
-            public void appOpenAdState(boolean state_load) {
                 UseActivity.super.onBackPressed();
-            }
-        });
+//        AdUtils.showBackPressAds(activity, Constants.adsResponseModel.getApp_open_ads().getAdx(), new AppInterfaces.AppOpenADInterface() {
+//            @Override
+//            public void appOpenAdState(boolean state_load) {
+//            }
+//        });
     }
 }

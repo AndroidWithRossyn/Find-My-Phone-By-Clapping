@@ -4,11 +4,11 @@ plugins {
 
 android {
     namespace 'com.adsmodule.api'
-    compileSdk 32
+    compileSdk 34
 
     defaultConfig {
         minSdk 24
-        targetSdk 32
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 

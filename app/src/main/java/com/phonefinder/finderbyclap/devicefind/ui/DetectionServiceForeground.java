@@ -102,7 +102,9 @@ public class DetectionServiceForeground extends Service implements OnSignalsDete
 
         public void handleMessage(Message message) {
             MainActivity.notification = DetectionServiceForeground.this.initNotification("MyService is running");
-            DetectionServiceForeground.this.startForeground(message.arg1, MainActivity.notification);
+//            DetectionServiceForeground.this.startForeground(message.arg1, MainActivity.notification);
+            /*TODO -> work as notification
+            */
         }
     }
 
@@ -113,7 +115,12 @@ public class DetectionServiceForeground extends Service implements OnSignalsDete
     public void onCreate() {
         startHandler();
         IntentFilter filter = new IntentFilter(ACTION_STOP_FUNCTIONALITIES);
-        registerReceiver(stopFunctionalityReceiver, filter);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            registerReceiver(stopFunctionalityReceiver, filter, Context.RECEIVER_EXPORTED);
+        }else {
+            registerReceiver(stopFunctionalityReceiver, filter);
+
+        }
     }
 
     private void startHandler() {
@@ -147,7 +154,7 @@ public class DetectionServiceForeground extends Service implements OnSignalsDete
         }
         Timer timer2 = new Timer();
         this.otherAppAudioTimer = timer2;
-        timer2.scheduleAtFixedRate(new TimerTask() {
+        timer2.schedule(new TimerTask() {
             /* class com.wisetechapps.whistle.find.phone.service.DetectionServiceForeground.AnonymousClass1 */
 
             @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)

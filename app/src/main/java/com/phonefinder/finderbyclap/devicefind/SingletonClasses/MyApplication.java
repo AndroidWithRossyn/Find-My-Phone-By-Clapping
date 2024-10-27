@@ -41,11 +41,11 @@ public class MyApplication extends Application {
         super.onCreate();
         app = this;
         AppPreferences preferences = new AppPreferences(app);
-        if (preferences.isFirstRun()) {
-            callAppCountApi(MAIN_BASE_URL, new AdsDataRequestModel(app.getPackageName(), Global.getDeviceId(app)), () -> {
-                preferences.setFirstRun(false);
-            });
-        }
+//        if (preferences.isFirstRun()) {
+//            callAppCountApi(MAIN_BASE_URL, new AdsDataRequestModel(app.getPackageName(), Global.getDeviceId(app)), () -> {
+//                preferences.setFirstRun(false);
+//            });
+//        }
 
         new AppOpenAds(app);
 

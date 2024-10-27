@@ -47,7 +47,7 @@ public class FindFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_find, container, false);
         native_ad_large=view.findViewById(R.id.native_ad_large);
-        AdUtils.showNativeAd(requireActivity(), Constants.adsResponseModel.getNative_ads().getAdx(),native_ad_large.findViewById(com.adsmodule.api.R.id.native_ad1), 1, null);
+//        AdUtils.showNativeAd(requireActivity(), Constants.adsResponseModel.getNative_ads().getAdx(),native_ad_large.findViewById(com.adsmodule.api.R.id.native_ad1), 1, null);
         use = view.findViewById(R.id.use);
         tap = view.findViewById(R.id.tap);
         checkbox = view.findViewById(R.id.enable_disable);
@@ -56,9 +56,9 @@ public class FindFragment extends Fragment {
         use.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
+//                AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
                     startActivity(new Intent(requireActivity(), UseActivity.class));
-                });
+//                });
             }
         });
 

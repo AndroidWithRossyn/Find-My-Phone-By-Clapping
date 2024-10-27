@@ -49,8 +49,8 @@ public class DashBoardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityDashBoardBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        AdUtils.showNativeAd(activity, Constants.adsResponseModel.getNative_ads().getAdx(), binding.nativeAd1.findViewById(com.adsmodule.api.R.id.native_ad1), 1, null);
-        AdUtils.showNativeAd(activity, Constants.adsResponseModel.getNative_ads().getAdx(), binding.nativeAd0.findViewById(com.adsmodule.api.R.id.native_ad), 2, null);
+//        AdUtils.showNativeAd(activity, Constants.adsResponseModel.getNative_ads().getAdx(), binding.nativeAd1.findViewById(com.adsmodule.api.R.id.native_ad1), 1, null);
+//        AdUtils.showNativeAd(activity, Constants.adsResponseModel.getNative_ads().getAdx(), binding.nativeAd0.findViewById(com.adsmodule.api.R.id.native_ad), 2, null);
 
         Drawable defaultBackground = new ColorDrawable(Color.TRANSPARENT);
         Drawable pressedBackground = getResources().getDrawable(R.drawable.back_checked);
@@ -74,7 +74,7 @@ public class DashBoardActivity extends AppCompatActivity {
         binding.phoneFinderll.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
+//                AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
                     binding.phoneFinderll.setBackground(pressedBackground);
                     binding.settingLl.setBackground(defaultBackground);
                     binding.referLl.setBackground(defaultBackground);
@@ -82,14 +82,14 @@ public class DashBoardActivity extends AppCompatActivity {
                     binding.privacyPolicyLl.setBackground(defaultBackground);
                     binding.drawer.closeDrawer(Gravity.LEFT);
                     navigateToMainActivityWithFragment(FindFragment.class, R.drawable.find_selector);
-                });
+//                });
 
             }
         });
         binding.settingLl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
+//                AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
                     binding.settingLl.setBackground(pressedBackground);
                     binding.phoneFinderll.setBackground(defaultBackground);
                     binding.referLl.setBackground(defaultBackground);
@@ -97,7 +97,7 @@ public class DashBoardActivity extends AppCompatActivity {
                     binding.privacyPolicyLl.setBackground(defaultBackground);
                     binding.drawer.closeDrawer(Gravity.LEFT);
                     startActivity(new Intent(DashBoardActivity.this,SettingActivity.class));
-                });
+//                });
             }
         });
         binding.referLl.setOnClickListener(new View.OnClickListener() {
@@ -116,7 +116,7 @@ public class DashBoardActivity extends AppCompatActivity {
         binding.privacyLl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
+//                AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
                     binding.privacyLl.setBackground(pressedBackground);
                     binding.phoneFinderll.setBackground(defaultBackground);
                     binding.settingLl.setBackground(defaultBackground);
@@ -124,14 +124,14 @@ public class DashBoardActivity extends AppCompatActivity {
                     binding.privacyPolicyLl.setBackground(defaultBackground);
                     binding.drawer.closeDrawer(Gravity.LEFT);
                     startActivity(new Intent(activity,NewPrivacyPolicyActivity.class));
-                });
+//                });
 
             }
         });
         binding.privacyPolicyLl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
+//                AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
                     binding.privacyPolicyLl.setBackground(pressedBackground);
                     binding.phoneFinderll.setBackground(defaultBackground);
                     binding.settingLl.setBackground(defaultBackground);
@@ -139,16 +139,16 @@ public class DashBoardActivity extends AppCompatActivity {
                     binding.privacyLl.setBackground(defaultBackground);
                     binding.drawer.closeDrawer(Gravity.LEFT);
                     startActivity(new Intent(activity,TermsConditionsActivity.class));
-                });
+//                });
 
             }
         });
         binding.start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
+//                AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
                     startActivity(new Intent(activity, MainActivity.class));
-                });
+//                });
 
 
             }
@@ -156,17 +156,17 @@ public class DashBoardActivity extends AppCompatActivity {
         binding.settingScreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
+//                AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
                     startActivity(new Intent(activity, SettingActivity.class));
-                });
+//                });
             }
         });
         binding.privacyScreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
+//                AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
                     startActivity(new Intent(activity, NewPrivacyPolicyActivity.class));
-                });
+//                });
             }
         });
         binding.shareScreen.setOnClickListener(new View.OnClickListener() {
@@ -270,7 +270,7 @@ public class DashBoardActivity extends AppCompatActivity {
         dialog.setCanceledOnTouchOutside(false);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog.show();
-        AdUtils.showNativeAd(activity, Constants.adsResponseModel.getNative_ads().getAdx(), bind.nativeAd2.findViewById(com.adsmodule.api.R.id.native_ad1), 1, null);
+//        AdUtils.showNativeAd(activity, Constants.adsResponseModel.getNative_ads().getAdx(), bind.nativeAd2.findViewById(com.adsmodule.api.R.id.native_ad1), 1, null);
         bind.btnExit.setOnClickListener(v -> {
             dialog.dismiss();
             finishAffinity();

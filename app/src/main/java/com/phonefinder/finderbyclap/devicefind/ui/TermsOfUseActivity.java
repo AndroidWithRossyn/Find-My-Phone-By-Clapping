@@ -21,16 +21,16 @@ public class TermsOfUseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_terms_of_use);
-        AdUtils.showNativeAd(activity, Constants.adsResponseModel.getNative_ads().getAdx(), binding.nativeAd0.findViewById(com.adsmodule.api.R.id.native_ad), 2, null);
+//        AdUtils.showNativeAd(activity, Constants.adsResponseModel.getNative_ads().getAdx(), binding.nativeAd0.findViewById(com.adsmodule.api.R.id.native_ad), 2, null);
 
         type = getIntent().getIntExtra("type", 0);
 //        AdUtils.showNativeAd(activity, Constants.adsResponseModel.getNative_ads().getAdx(), binding.nativeAd0, 2, null);
         binding.privacyPolicyTV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
                     startActivity(new Intent(activity, NewPrivacyPolicyActivity.class));
-                });
+//                AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
+//                });
 
             }
         });
@@ -38,9 +38,9 @@ public class TermsOfUseActivity extends AppCompatActivity {
         binding.termsConditionsTV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
                     startActivity(new Intent(activity, TermsConditionsActivity.class));
-                });
+//                AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
+//                });
             }
         });
 
@@ -54,9 +54,9 @@ public class TermsOfUseActivity extends AppCompatActivity {
     }
 
     private void mStartAct() {
-        AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
+//        AdUtils.showInterstitialAd(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity, isLoaded -> {
             startActivity(new Intent(activity, DashBoardActivity.class));
             finish();
-        });
+//        });
     }
 }

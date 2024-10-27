@@ -6,6 +6,7 @@ import static com.adsmodule.api.AdsModule.Utils.Global.isNull;
 import static com.phonefinder.finderbyclap.devicefind.SingletonClasses.AppOpenAds.activity;
 import static com.phonefinder.finderbyclap.devicefind.SingletonClasses.MyApplication.getConnectionStatus;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -20,35 +21,36 @@ import com.phonefinder.finderbyclap.devicefind.R;
 
 import java.util.Arrays;
 
+@SuppressLint("CustomSplashScreen")
 public class SplashActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        if (getConnectionStatus().isConnectingToInternet()) {
-            callAdsApi(Constants.MAIN_BASE_URL, new AdsDataRequestModel(this.getPackageName(), ""), adsResponseModel -> {
-                if (adsResponseModel != null) {
-                    Constants.adsResponseModel = adsResponseModel;
-                    if (!isNull(Constants.adsResponseModel.getMonetize_platform()))
-                        Constants.platformList = Arrays.asList(Constants.adsResponseModel.getMonetize_platform().split(","));
-                    if (checkAppVersion(adsResponseModel.getVersion_name(), activity)) {
-                        Global.showUpdateAppDialog(activity);
-                    } else {
-                        AdUtils.buildAppOpenAdCache(activity, Constants.adsResponseModel.getApp_open_ads().getAdx());
-                        AdUtils.buildNativeCache(Constants.adsResponseModel.getNative_ads().getAdx(), activity);
-                        AdUtils.buildInterstitialAdCache(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity);
-                        AdUtils.buildRewardAdCache(Constants.adsResponseModel.getRewarded_ads().getAdx(), activity);
-                        AdUtils.showAppOpenAds(Constants.adsResponseModel.getApp_open_ads().getAdx(), activity, state_load -> {
-                            openActivity();
-                        });
-                    }
-                }
-
-            });
-        } else {
+//        if (getConnectionStatus().isConnectingToInternet()) {
+//            callAdsApi(Constants.MAIN_BASE_URL, new AdsDataRequestModel(this.getPackageName(), ""), adsResponseModel -> {
+//                if (adsResponseModel != null) {
+//                    Constants.adsResponseModel = adsResponseModel;
+//                    if (!isNull(Constants.adsResponseModel.getMonetize_platform()))
+//                        Constants.platformList = Arrays.asList(Constants.adsResponseModel.getMonetize_platform().split(","));
+//                    if (checkAppVersion(adsResponseModel.getVersion_name(), activity)) {
+//                        Global.showUpdateAppDialog(activity);
+//                    } else {
+//                        AdUtils.buildAppOpenAdCache(activity, Constants.adsResponseModel.getApp_open_ads().getAdx());
+//                        AdUtils.buildNativeCache(Constants.adsResponseModel.getNative_ads().getAdx(), activity);
+//                        AdUtils.buildInterstitialAdCache(Constants.adsResponseModel.getInterstitial_ads().getAdx(), activity);
+//                        AdUtils.buildRewardAdCache(Constants.adsResponseModel.getRewarded_ads().getAdx(), activity);
+//                        AdUtils.showAppOpenAds(Constants.adsResponseModel.getApp_open_ads().getAdx(), activity, state_load -> {
+//                            openActivity();
+//                        });
+//                    }
+//                }
+//
+//            });
+//        } else {
             openActivity();
-        }
+//        }
 
     }
 
